@@ -19,18 +19,6 @@
     transform: translateX(-50%);
 }
 
-.barra-pesquisa input{
-    background-color: white;
-    color: white;
-}
-
 .waves-effect.waves-teal.btn-flat.blue.botao {
     color: white;
-}
-
-.brand-logo.center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -5%; /* Adjust as needed */
 }
