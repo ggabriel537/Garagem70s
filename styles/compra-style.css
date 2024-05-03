@@ -1,0 +1,36 @@
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collection-item {
+    flex: 0 0 30%;
+    margin: 10px;
+    position: relative;
+    
+}
+
+.carros a {
+    position: absolute;
+    top: auto;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.barra-pesquisa input{
+    background-color: white;
+    color: white;
+}
+
+.waves-effect.waves-teal.btn-flat.blue.botao {
+    color: white;
+}
+
+.brand-logo.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5%; /* Adjust as needed */
+}

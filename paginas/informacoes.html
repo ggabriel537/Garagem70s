@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garagem 70's - Informações</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../styles/compra-style.css">
+</head>
+<body>
+    <div class="navegacao">
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="#" class="brand-logo center">
+                    <img src="../imagens/logo-removebg-preview.png" width="80" height="80" >
+                </a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="venda.html">Venda</a></li>
+                    <li><a href="compra.html">Compra</a></li>
+                    <li><a href="informacoes.html">Informações</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <div class="barra-pesquisa">
+                        <form id="pesquisa" action="compra.html" method="get">
+                            <input type="text" placeholder="Pesquisar" onkeydown="enviarForm(event)"
+                                id="item-pesquisado">
+                        </form>
+
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="sobre center">
+        <h1>Sobre a Garagem 70's</h1>
+        <p>
+            Bem-vindo à <strong>Garagem 70's</strong>, o seu destino para encontrar carros antigos e restaurados com a máxima qualidade. 
+            Localizada no coração da cidade, nossa loja é especializada na venda de veículos que não só representam uma era dourada do automobilismo, mas que também são verdadeiras peças de colecionador.
+        </p>
+        <p>
+            Desde 2024, estamos comprometidos em trazer de volta à vida a glória dos automóveis dos anos 70. Cada carro em nossa coleção é cuidadosamente selecionado e restaurado por nossos especialistas, que utilizam técnicas tradicionais e peças originais sempre que possível.
+        </p>
+        <p>
+            Na Garagem 70's, entendemos que um carro antigo não é apenas um meio de transporte, mas um pedaço da história que merece ser preservado.
+        </p>
+    </section>
+    
+    <section class="servicos center">
+        <h2>Nossos Serviços</h2>
+        <ul class="collection">
+            <a class="collection-item">Venda de carros antigos e restaurados</a>
+            <a class="collection-item">Restauração de carros antigos</a>
+            <a class="collection-item">Avaliação de carros antigos para compra</a>
+            <a class="collection-item">Consultoria especializada em investimento em veículos clássicos</a>
+        </ul>
+    </section>
+    
+    <section class="contato center">
+        <h2>Contato</h2>
+        <p>Para mais informações sobre nossos carros ou serviços, por favor, entre em contato conosco:</p>
+        <ul>
+            <li>Email: contato@garagem70s.com</li>
+            <li>Telefone: (11) 4002-8922</li>
+            <li>Endereço: Rua dos Antiguidades, 123, Centro - Dourados/MS</li>
+        </ul>
+    </section>
+
+
+    <div class="rodape">
+        <footer class="page-footer blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12 blue darken-1">
+                        <h5 class="white-text">Garagem 70's</h5>
+                        <p class="grey-text text-lighten-4">Desde 2024 trazendo carros antigos devolta a vida!</p>
+                    </div>
+                    <div class="right">
+                        <img src="../imagens/logo-removebg-preview.png" width="120px" height="120px">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2024 Garagem 70's
+                    <a class="grey-text text-lighten-4 right" href="#!">Informações</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="scripts/pesquisar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
