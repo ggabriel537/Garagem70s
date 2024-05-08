@@ -16,7 +16,7 @@
     top: auto;
     bottom: 8px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /**/
 }
 
 .waves-effect.waves-teal.btn-flat.blue.botao {
