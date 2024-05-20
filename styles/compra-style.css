@@ -16,7 +16,22 @@
     top: auto;
     bottom: 8px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /**/
+}
+
+#adicionar a {
+    position: absolute;
+    top: auto;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%); /**/
+}
+
+#adicionar {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 10px;
 }
 
 .waves-effect.waves-teal.btn-flat.blue.botao {
