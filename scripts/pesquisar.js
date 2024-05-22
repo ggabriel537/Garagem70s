@@ -1,13 +1,15 @@
-function pesquisar() {
-    let pesquisa = document.getElementById('item-pesquisado').value.toUpperCase;
-    let items = document.querySelectorAll('#listacarros .collection-item');
+function filtrar(){
+    const filtro = document.getElementById('item-pesquisado').value.toUpperCase();
+    const lis = document.querySelectorAll('#listacarros li');
 
-    items.forEach(item => {
-        let title = item.querySelector('.card-title').textContent.toUpperCase();
-        if (title.indexOf(pesquisa) > -1) {
-            item.style.display = "";
+    lis.forEach(li => {
+        const carros = li.querySelector('.card-title');
+        const nomeCarro = carros.textContent.toUpperCase();
+
+        if (nomeCarro.includes(filtro)) {
+            li.style.display = 'block';
         } else {
-            item.style.display = "none";
+            li.style.display = 'none';
         }
     });
 }
