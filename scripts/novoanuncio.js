@@ -1,3 +1,5 @@
+var cont = 0;
+
 async function dadosItem() {
   let htmlinterno = `
   <textarea id="nome" class="swal2-textarea" placeholder="Digite o nome do carro" aria-label="Digite o nome do carro"></textarea>
@@ -8,10 +10,11 @@ async function dadosItem() {
 
   <textarea id="imagem" class="swal2-textarea" placeholder="Digite o local onde está a imagem" aria-label="Digite o local onde está a imagem"></textarea>
   <br>
-  `;
+  `; //html de base para as text area
 
   let nome, desc, imagem;
 
+  //mensagem do sweetalert
   await Swal.fire({
     title: 'Informações do Carro',
     html: htmlinterno,
@@ -25,14 +28,15 @@ async function dadosItem() {
     },
     showCancelButton: true
   }).then((result) => {
-    if (result.isConfirmed) {
+    if (result.isConfirmed) { //atribui os valores digitados as variaveis correspondentes
       nome = result.value.nome;
       desc = result.value.desc;
       imagem = result.value.imagem;
       if(nome != "" && desc != "" && imagem != "")
         {
+          salvarItem(nome, desc, imagem); //caso os valores não forem vazios ele salva os dados criados e adiciona o item a lista
           adicionarItem(nome, desc, imagem);
-        }else{
+        }else{ //funcao para mostrar mensagem caso o que for digitado estiver incorreto ou caso usuario clicar em cancelar
           
             Swal.fire({
               title: "Carro não adicionado",
@@ -52,30 +56,13 @@ async function dadosItem() {
   });
 }
 
-function adicionarItem(nome, descricao, foto) {
-  var novoItem = document.createElement("li");
-  novoItem.classList.add("collection-item");
-
-  novoItem.innerHTML = `
-        <div>
-            <div class="row">
-                <div class="col s28 m18">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-teal">
-                            <img src="${foto}">
-                            <span class="card-title">${nome}</span>
-                        </div>
-                        <div class="card-content">
-                            <p>${descricao}</p>
-                        </div>
-                        <br><br>
-                        <a class="waves-effect waves-teal btn-flat blue botao">Ver mais</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-
-  var lista = document.querySelector("#listacarros");
-  lista.appendChild(novoItem);
+function salvarItem(nome, descricao, foto) {
+  var itemsSalvos = JSON.parse(sessionStorage.getItem('itensSalvos')) || []; //pega os itens atuais salvos na sessionstorage
+  var novoItem = {
+      nome: nome,
+      descricao: descricao,
+      foto: foto
+  };
+  itemsSalvos.push(novoItem); 
+  sessionStorage.setItem('itensSalvos', JSON.stringify(itemsSalvos)); //salva novo item na session storage
 }
