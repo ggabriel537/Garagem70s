@@ -1,5 +1,3 @@
-var cont = 0;
-
 async function dadosItem() {
   let htmlinterno = `
   <textarea id="nome" class="swal2-textarea" placeholder="Digite o nome do carro" aria-label="Digite o nome do carro"></textarea>
@@ -19,6 +17,8 @@ async function dadosItem() {
     title: 'Informações do Carro',
     html: htmlinterno,
     focusConfirm: false,
+    confirmButtonText: 'Confirmar',
+    cancelButtonText: 'Cancelar',
     preConfirm: () => {
       return {
         nome: document.getElementById('nome').value,
@@ -34,8 +34,8 @@ async function dadosItem() {
       imagem = result.value.imagem;
       if(nome != "" && desc != "" && imagem != "")
         {
+          console.log(nome, desc, imagem);
           salvarItem(nome, desc, imagem); //caso os valores não forem vazios ele salva os dados criados e adiciona o item a lista
-          adicionarItem(nome, desc, imagem);
         }else{ //funcao para mostrar mensagem caso o que for digitado estiver incorreto ou caso usuario clicar em cancelar
           
             Swal.fire({
