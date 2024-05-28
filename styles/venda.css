@@ -5,3 +5,8 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
+body.swal2-shown > [aria-hidden='true'] {
+    transition: filter;
+    filter: blur(4px);
+}

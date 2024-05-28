@@ -9,6 +9,7 @@
     <title>Garagem 70's - Inicio</title>
 </head>
 <!---->
+
 <body>
     <div id="cabecalho"></div> <!--Div para usar depois para colocar o cabecalho-->
     <div class="carros">
@@ -32,70 +33,21 @@
                     </div>
                 </div>
             </li>
-            <li class="collection-item">
-                <div>
-                    <div class="row">
-                        <div class="col s28 m18">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-teal">
-                                    <img src="../imagens/GE2B8378-HDR-e1630725781589.webp">
-                                    <span class="card-title">Opala</span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Opala SS com comando 250 e carburador Weber 40 dupla</p>
-                                </div>
-                                <br><br>
-                                <a class="waves-effect waves-teal btn-flat blue botao">Ver mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="collection-item">
-                <div>
-                    <div class="row">
-                        <div class="col s28 m18">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-teal">
-                                    <img src="../imagens/1_1-32750335.jpg">
-                                    <span class="card-title">F-1000</span>
-                                </div>
-                                <div class="card-content">
-                                    <p>F-1000 super conservada, exemplar de colecionador</p>
-                                </div>
-                                <br><br>
-                                <a class="waves-effect waves-teal btn-flat blue botao">Ver mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="collection-item">
-                <div>
-                    <div class="row">
-                        <div class="col s28 m18">
-                            <div class="card">
-                                <div class="card-image waves-effect waves-teal">
-                                    <img src="../imagens/DSCF0034-V1-e1648581252951.webp">
-                                    <span class="card-title">Maverick</span>
-                                </div>
-                                <div class="card-content">
-                                    <p>Maverick 1975 em condições impecaveis.</p>
-                                </div>
-                                <br><br>
-                                <a class="waves-effect waves-teal btn-flat blue botao">Ver mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
         </ul>
     </div>
     <div id="rodape"></div> <!--Div para colocar o rodapé-->
     <script src="../scripts/abrircabrod.js"></script> <!--Chama função para preencher rodapé e cabecalho-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../scripts/abriranuncio.js"></script>
     <script src="../scripts/carregarcarros.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/pesquisar.js"></script>
+    <script>
+        window.onload = function () {
+            carregarCarros();
+            abrirAnuncios();
+        }
+    </script>
 </body>
 
 </html>

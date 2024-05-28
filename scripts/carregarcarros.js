@@ -1,9 +1,3 @@
-window.onload = function(){
-    carregarCarros();
-}
-
-var cont;
-
 function adicionarItem(nome, descricao, foto) {
     var novoItem = document.createElement("li"); //cria novo item da lista para armazenar os carros
     novoItem.classList.add("collection-item"); //adiciona a classe de collection item ao item da lista 
@@ -31,8 +25,10 @@ function adicionarItem(nome, descricao, foto) {
 }
 
 function carregarCarros() {
+    console.log('carrega carros');
     var itemsSalvos = JSON.parse(sessionStorage.getItem('itensSalvos')) || []; //Pega o array do sessionstorage onde está guardado os dados dos carros
-    itemsSalvos.forEach(function(item) {
+    console.log(itemsSalvos);
+    itemsSalvos.forEach(function (item) {
         adicionarItem(item.nome, item.descricao, item.foto);
     });
 }
